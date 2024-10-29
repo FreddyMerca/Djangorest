@@ -39,7 +39,7 @@ THIRD_APPS = [
     'corsheaders',
     'automatic_crud',
     'rest_framework',
-    #'rest_framework.authtoken',
+    'rest_framework.authtoken',
     'rest_framework_simplejwt',  
     'rest_framework_simplejwt.token_blacklist',  
     'simple_history',
@@ -143,3 +143,10 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Asegúrate de que esta carpeta exista
+    
+]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

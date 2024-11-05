@@ -17,6 +17,7 @@ from apps.expense_manager.api.serializers.general_serializer import *
 from apps.expense_manager.api.serializers.expense_serializer import *
 
 class ExpenseViewSet(viewsets.GenericViewSet):
+    queryset=Expense.objects.all()
     serializer_class = ExpenseSerializer
 
     @action(methods=['get'], detail=False)
